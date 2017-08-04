@@ -37,7 +37,7 @@ final class Entry<K: Hashable,V>: CustomStringConvertible {
     var description: String { return "\(getKey())=\(getValue())" }
 
 }
-func == <K: Hashable, V: Equatable>(lhs: Entry<K,V>, rhs: Entry<K,V>) -> Bool {
+func == <K, V: Equatable>(lhs: Entry<K,V>, rhs: Entry<K,V>) -> Bool {
     if lhs === rhs {
         return true
     }
@@ -48,7 +48,7 @@ func == <K: Hashable, V: Equatable>(lhs: Entry<K,V>, rhs: Entry<K,V>) -> Bool {
     }
     return false
 }
-func == <K: Hashable, V: Equatable>(lhs: Entry<K,V?>, rhs: Entry<K,V?>) -> Bool {
+func == <K, V: Equatable>(lhs: Entry<K,V?>, rhs: Entry<K,V?>) -> Bool {
     if lhs === rhs {
         return true
     }

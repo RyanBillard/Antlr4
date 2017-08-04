@@ -21,7 +21,7 @@ public class ProxyErrorListener: ANTLRErrorListener {
     }
 
     //_ e : RecognitionException
-    public func syntaxError<T:ATNSimulator>(_ recognizer: Recognizer<T>,
+    public func syntaxError<T>(_ recognizer: Recognizer<T>,
                                             _ offendingSymbol: AnyObject?,
                                             _ line: Int,
                                             _ charPositionInLine: Int,

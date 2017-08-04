@@ -149,7 +149,7 @@ public class ATNConfig: Hashable, CustomStringConvertible {
         //return "MyClass \(string)"
         return toString(nil, true)
     }
-    public func toString<T:ATNSimulator>(_ recog: Recognizer<T>?, _ showAlt: Bool) -> String {
+    public func toString<T>(_ recog: Recognizer<T>?, _ showAlt: Bool) -> String {
         let buf: StringBuilder = StringBuilder()
 //		if ( state.ruleIndex>=0 ) {
 //			if ( recog!=null ) buf.append(recog.getRuleNames()[state.ruleIndex]+":");

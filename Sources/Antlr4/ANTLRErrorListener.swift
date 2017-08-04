@@ -35,13 +35,13 @@ public protocol ANTLRErrorListener: class {
     /// the reporting of an error. It is null in the case where
     /// the parser was able to recover in line without exiting the
     /// surrounding rule.
-    func syntaxError<T:ATNSimulator>(_ recognizer: Recognizer<T>,
+	func syntaxError<T>(_ recognizer: Recognizer<T>,
                                      _ offendingSymbol: AnyObject?,
                                      _ line: Int,
                                      _ charPositionInLine: Int,
                                      _ msg: String,
                                      _ e: AnyObject?// RecognitionException?
-    )
+	)
 
     /// This method is called by the parser when a full-context prediction
     /// results in an ambiguity.

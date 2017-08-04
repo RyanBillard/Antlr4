@@ -219,9 +219,8 @@ public class ATNConfigSet: Hashable, CustomStringConvertible {
     private var configsHashValue: Int {
         var hashCode = 1
         for item in configs {
-            hashCode = Int.multiplyWithOverflow(3, hashCode).0
-            hashCode = Int.addWithOverflow(hashCode, item.hashValue).0
-
+			hashCode = 3.multipliedReportingOverflow(by: hashCode).0
+			hashCode = hashCode.addingReportingOverflow(item.hashValue).0
         }
         return hashCode
 
