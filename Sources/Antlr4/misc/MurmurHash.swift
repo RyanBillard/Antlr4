@@ -49,7 +49,7 @@ public final class MurmurHash {
         let m: Int32 = 5
         let n: Int32 = -430675100//0xE6546B64;
 
-        var k: Int32 = Int32(extendingOrTruncating: value)
+        var k: Int32 = Int32(truncatingIfNeeded: value)
 		k = k.multipliedReportingOverflow(by: c1).0
         // (k,_) = UInt32.multiplyWithOverflow(k, c1)     ;//( k * c1);
         //TODO: CHECKE >>>

@@ -598,12 +598,12 @@ public class BitSet: Hashable, CustomStringConvertible {
             return 64
         }
         var n: Int32 = 63
-        y = Int32(extendingOrTruncating: i)
+        y = Int32(truncatingIfNeeded: i)
         if y != 0 {
             n = n - 32
             x = y
         } else {
-            x = Int32(extendingOrTruncating: i >>> 32)
+            x = Int32(truncatingIfNeeded: i >>> 32)
         }
 
         y = x << 16
